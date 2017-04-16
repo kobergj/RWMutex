@@ -1,0 +1,1041 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"field",
+				"fieldObject"
+			],
+			[
+				"curr",
+				"currentField"
+			],
+			[
+				"fie",
+				"fieldObject"
+			],
+			[
+				"New",
+				"NewFieldObject\t(fieldobject.go)"
+			],
+			[
+				"AddFiel",
+				"AddFieldObject\t(interfaces.go)"
+			],
+			[
+				"Vis",
+				"VisualizeString\t(interface.go)"
+			],
+			[
+				"Print",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"Pt",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"pa",
+				"package Controller\t ʂ"
+			],
+			[
+				"Fie",
+				"FieldObject\t(interface.go)"
+			],
+			[
+				"pac",
+				"package Gameobjects\t ʂ"
+			],
+			[
+				"packa",
+				"package Gameboard\t ʂ"
+			],
+			[
+				"Fak",
+				"FakeBoard"
+			],
+			[
+				"Game",
+				"Gamefields\t(interfaces.go)"
+			],
+			[
+				"Bui",
+				"BuildChapter00\t(chapters.go)"
+			],
+			[
+				"fi",
+				"fieldObjects\t[][]FieldObject ν"
+			],
+			[
+				"pack",
+				"package Gameboard\t ʂ"
+			],
+			[
+				"ex",
+				"expectedFields"
+			],
+			[
+				"exp",
+				"expected"
+			],
+			[
+				"ac",
+				"actualOk\tbool ν"
+			],
+			[
+				"row",
+				"rowToCheck"
+			],
+			[
+				"Set",
+				"SetCoordinates"
+			],
+			[
+				"A",
+				"AddFieldObject\t ƒ"
+			],
+			[
+				"expe",
+				"expectedObjects"
+			],
+			[
+				"ec",
+				"expectedObjects"
+			],
+			[
+				"fied",
+				"fields"
+			],
+			[
+				"Fiel",
+				"FieldObject"
+			],
+			[
+				"fiel",
+				"fieldObjects"
+			],
+			[
+				"Field",
+				"FieldsByRow"
+			],
+			[
+				"FIel",
+				"FieldObject"
+			],
+			[
+				"Boa",
+				"BoardObjectsByField\t(interfaces.go)"
+			],
+			[
+				"EMPTY",
+				"EMPTYROOM"
+			],
+			[
+				"st",
+				"stringView"
+			],
+			[
+				"HOR",
+				"HORIZONTALCROSSWALK"
+			],
+			[
+				"VERT",
+				"VERTICALCROSSWALK"
+			],
+			[
+				"HORI",
+				"HORIZONTALDOOR"
+			],
+			[
+				"board",
+				"boardString"
+			],
+			[
+				"Pri",
+				"Printf\tn int, err error ƒ"
+			],
+			[
+				"bo",
+				"body"
+			],
+			[
+				"EMPT",
+				"EMPTYROOM"
+			],
+			[
+				"ap",
+				"aSplitted"
+			],
+			[
+				"EM",
+				"EMPTYROOM"
+			],
+			[
+				"Fake",
+				"FakeField"
+			],
+			[
+				"erro",
+				"errors"
+			],
+			[
+				"stri",
+				"strings\t package ρ"
+			],
+			[
+				"Bo",
+				"Border\t(interfaces.go)"
+			],
+			[
+				"Fale",
+				"FakeFieldObject\t(fakeimplementations.go)"
+			],
+			[
+				"Fa",
+				"FakeFieldObjects"
+			],
+			[
+				"sec",
+				"sections"
+			],
+			[
+				"Se",
+				"Section"
+			],
+			[
+				"expecte",
+				"expectedString"
+			],
+			[
+				"strin",
+				"stringView"
+			],
+			[
+				"LINET",
+				"LINETWO"
+			],
+			[
+				"Rea",
+				"ReadString\tstring, error ƒ"
+			],
+			[
+				"Han",
+				"HandleClick"
+			],
+			[
+				"Trav",
+				"TravelOptions\t(initiators.py)"
+			],
+			[
+				"Carg",
+				"CargoCapacity"
+			],
+			[
+				"Top",
+				"TopMid\tstatement"
+			],
+			[
+				"img",
+				"imgstrategy\tparam"
+			],
+			[
+				"imgs",
+				"imgsrcstrategy\tstatement"
+			],
+			[
+				"NewCh",
+				"NewChildSprite"
+			],
+			[
+				"NewPAr",
+				"NewParentSprite"
+			],
+			[
+				"Fi",
+				"FindSpriteByImageSource\tfunction"
+			],
+			[
+				"Coor",
+				"CoordinateHandler\t(coordinates.py)"
+			],
+			[
+				"Int",
+				"InteractionTypes\tclass"
+			],
+			[
+				"int",
+				"interaction"
+			],
+			[
+				"game",
+				"gamemodel"
+			],
+			[
+				"Bot",
+				"BottomRight\t(coordinates.py)"
+			],
+			[
+				"Botto",
+				"BottomRight"
+			],
+			[
+				"Boto",
+				"BottomMid"
+			],
+			[
+				"Buy",
+				"BuyParent"
+			],
+			[
+				"NotI",
+				"NotImplementedError\tclass"
+			],
+			[
+				"co",
+				"constants\t(view.py)"
+			],
+			[
+				"ima",
+				"imagePathes"
+			],
+			[
+				"im",
+				"imgstrategy"
+			],
+			[
+				"Widget",
+				"WidgetStatus\t(widget.py)"
+			],
+			[
+				"Rend",
+				"RenderFont\tfunction"
+			],
+			[
+				"exe",
+				"execargs"
+			],
+			[
+				"Add",
+				"AddWidget\tfunction"
+			],
+			[
+				"Widg",
+				"WidgetFabric"
+			],
+			[
+				"Regis",
+				"RegisterSurface"
+			],
+			[
+				"get",
+				"getoffset"
+			],
+			[
+				"move",
+				"movetowards\tfunction"
+			],
+			[
+				"Dra",
+				"DrawSprites\tfunction"
+			],
+			[
+				"cond",
+				"condargs"
+			],
+			[
+				"Ex",
+				"ExecFunc\tfunction"
+			],
+			[
+				"mess",
+				"messageargs"
+			],
+			[
+				"Li",
+				"ListFunc"
+			],
+			[
+				"expa",
+				"expandable"
+			],
+			[
+				"expand",
+				"expandhandler"
+			],
+			[
+				"Colo",
+				"ColorHandler"
+			],
+			[
+				"e",
+				"execfunc\tparam"
+			],
+			[
+				"de",
+				"deadcol"
+			],
+			[
+				"Un",
+				"UnClickable"
+			],
+			[
+				"_exp",
+				"_exphdl"
+			],
+			[
+				"Expa",
+				"ExpandHandler"
+			],
+			[
+				"line",
+				"linelist\t(widget.py)"
+			],
+			[
+				"title",
+				"titleargs"
+			],
+			[
+				"reg",
+				"regarghandler"
+			],
+			[
+				"message",
+				"messagehandler"
+			],
+			[
+				"Exp",
+				"Expanded"
+			],
+			[
+				"Tit",
+				"TitleArgs"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"Regi",
+				"RegisterBottomLeft\tfunction"
+			],
+			[
+				"exec",
+				"execfunc"
+			],
+			[
+				"Reg",
+				"RegisterBottomRight\tfunction"
+			],
+			[
+				"opt",
+				"optionfunc"
+			],
+			[
+				"color",
+				"colorschemes\t(color.py)"
+			],
+			[
+				"I",
+				"iteritems\tfunction"
+			],
+			[
+				"switch",
+				"switchargs"
+			],
+			[
+				"Text",
+				"TextCoordinates"
+			],
+			[
+				"Switch",
+				"SwitchExecutor\t(switch.py)"
+			],
+			[
+				"button",
+				"buttonregistry"
+			],
+			[
+				"butto",
+				"buttonregistry"
+			],
+			[
+				"Numb",
+				"NumberOfDestinations\t(kindaconfiguration.py)"
+			],
+			[
+				"CargoCap",
+				"CargoCapacity\t(logic.py)"
+			],
+			[
+				"TRAVEL",
+				"TRAVELCOST"
+			],
+			[
+				"CAR",
+				"CARGOCAPNAME"
+			],
+			[
+				"START",
+				"STARTSHIP"
+			],
+			[
+				"TRAV",
+				"TRAVELCOST\t(logic.py)"
+			],
+			[
+				"boo",
+				"boostStats"
+			],
+			[
+				"C",
+				"CargoCap\tstatement"
+			],
+			[
+				"STA",
+				"STARTCREDITS"
+			],
+			[
+				"S",
+				"StartCredits\tstatement"
+			],
+			[
+				"F",
+				"FontSize\tstatement"
+			],
+			[
+				"Sell",
+				"SellLine\tstatement"
+			],
+			[
+				"B",
+				"ButtonSize\tstatement"
+			],
+			[
+				"Lo",
+				"LogFile\tstatement"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SendTextPlus/Python - Source File.sublime-build",
+					""
+				],
+				[
+					"Packages/User/chrome.sublime-build",
+					""
+				],
+				[
+					"Packages/User/gitcommit.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Go.sublime-build",
+					""
+				],
+				[
+					"Packages/User/python_custom.sublime-build",
+					""
+				],
+				[
+					"Packages/User/python_test.sublime-build",
+					""
+				],
+				[
+					"Packages/User/R.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"last_filter": "git bran",
+		"selected_items":
+		[
+			[
+				"git bran",
+				"Git: New Branch"
+			],
+			[
+				"q",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"qu",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"qui",
+				"Git: Quick Commit (repo)"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"nosetests",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Kokweazel/CustomMutex/rwmutex_test.go",
+		"/Users/Kokweazel/Documents/Bewerbungen/InitiativPrototyp.tex",
+		"/Users/Kokweazel/Documents/Bewerbungen/InitiativPrototypEnglish.tex",
+		"/Users/Kokweazel/Downloads/BewerbungsunterlagenRoh/InitiativPrototyp.tex",
+		"/Users/Kokweazel/Downloads/BewerbungsunterlagenRoh/Typ1.tex",
+		"/Users/Kokweazel/TheGome/Gameobjects/fieldobject.go",
+		"/Users/Kokweazel/TheGome/Gameobjects/interface.go",
+		"/Users/Kokweazel/TheGome/Gameobjects/fakefieldobject.go",
+		"/Users/Kokweazel/TheGome/Builders/chapters.go",
+		"/Users/Kokweazel/TheGome/main.go",
+		"/Users/Kokweazel/TheGome/Constants/actions.go",
+		"/Users/Kokweazel/TheGome/Controller/interface.go",
+		"/Users/Kokweazel/TheGome/Controller/controller.go",
+		"/Users/Kokweazel/TheGome/Gameobjects/interfaces.go",
+		"/Users/Kokweazel/TheGome/Stringview/interface.go",
+		"/Users/Kokweazel/TheGome/Gameboard/fakeimplementations.go",
+		"/Users/Kokweazel/TheGome/Gameboard/board_test.go",
+		"/Users/Kokweazel/TheGome/Stringview/stringview_test.go",
+		"/Users/Kokweazel/TheGome/Stringview/interfaces.go",
+		"/Users/Kokweazel/TheGome/Gameboard/interfaces.go",
+		"/Users/Kokweazel/TheGome/Stringview/fakeimplementations.go",
+		"/Users/Kokweazel/TheGome/Gameboard/fakeboard.go",
+		"/Users/Kokweazel/TheGome/Gamefields/fakefield.go",
+		"/Users/Kokweazel/TheGome/Gamefields/interfaces.go",
+		"/Users/Kokweazel/TheGome/Gameboard/board.go",
+		"/Users/Kokweazel/TheGome/Stringview/stringview.go",
+		"/Users/Kokweazel/TheGome/Gamefields/field.go",
+		"/Users/Kokweazel/TheGome/Gameboard/field.go",
+		"/Users/Kokweazel/TheGome/Gameboard/fieldobject.go",
+		"/Users/Kokweazel/TheGome/TestHelpers/fakeboard.go",
+		"/Users/Kokweazel/TheGome/Constants/border.go",
+		"/Users/Kokweazel/TheGame/models/constants.py",
+		"/Users/Kokweazel/TheGame/view/images.py",
+		"/Users/Kokweazel/TheGame/view/view.py",
+		"/Users/Kokweazel/TheGame/game/game.py",
+		"/Users/Kokweazel/TheGame/TheGame.py",
+		"/Users/Kokweazel/TheGame/helpers/kindaconfiguration.py",
+		"/Users/Kokweazel/TheGame/pygameapi/sprites.py",
+		"/Users/Kokweazel/TheGame/pygameapi/window.py",
+		"/Users/Kokweazel/TheGame/pygameapi/pygameapi.py",
+		"/Users/Kokweazel/TheGame/pygameapi/eventhandler.py",
+		"/Users/Kokweazel/TheGame/pygameapi/coordinates.py",
+		"/Users/Kokweazel/TheGame/game/getters/logic.py",
+		"/Users/Kokweazel/TheGame/helpers/logger.py",
+		"/Users/Kokweazel/TheGame/sandbox.py",
+		"/Users/Kokweazel/TheGame/game/setters/logic.py",
+		"/Users/Kokweazel/TheGame/game/widgets/initiators.py",
+		"/Users/Kokweazel/TheGame/view/widget.py",
+		"/Users/Kokweazel/TheGame/view/initiators.py",
+		"/Users/Kokweazel/TheGame/game/view/button.py",
+		"/Users/Kokweazel/TheGame/game/widgets/widget.py",
+		"/Users/Kokweazel/TheGame/view/__init__.py",
+		"/Users/Kokweazel/TheGame/models/models.py",
+		"/Users/Kokweazel/TheGame/game/view/fabric.py",
+		"/Users/Kokweazel/TheGame/game/view/colors.py",
+		"/Users/Kokweazel/TheGame/visualization/pygameapi.py",
+		"/Users/Kokweazel/Documents/Projects/TheGame.sublime-project",
+		"/Users/Kokweazel/TheGame/game/view/view.py",
+		"/Users/Kokweazel/TheGame/game/widgets/__init__.py",
+		"/Users/Kokweazel/TheGame/game/view/switch.py",
+		"/Users/Kokweazel/TheGame/game/view/coordinates.py",
+		"/Users/Kokweazel/TheGame/implementations/registry.py",
+		"/Users/Kokweazel/TheGame/game/view/color.py",
+		"/Users/Kokweazel/TheGame/game/view/window.py",
+		"/Users/Kokweazel/TheGame/helpers/setup.py",
+		"/Users/Kokweazel/TheGame/game/getters/player.py",
+		"/Users/Kokweazel/TheGame/game/setters/universe.py",
+		"/Users/Kokweazel/TheGame/game/setters/player.py",
+		"/Users/Kokweazel/TheGame/implementations/queue.py",
+		"/Users/Kokweazel/TheGame/implementations/tests.py",
+		"/Users/Kokweazel/TheGame/game/setters/tests.py",
+		"/Users/Kokweazel/TheGame/visualization/__init__.py",
+		"/Users/Kokweazel/TheGame/game/__init__.py",
+		"/Users/Kokweazel/TheGame/view/logic.py",
+		"/Users/Kokweazel/TheGame/game.py",
+		"/Users/Kokweazel/TheGame/controllers/fleet.py",
+		"/Users/Kokweazel/TheGame/controllers/logic.py",
+		"/Users/Kokweazel/TheGame/view/player.py",
+		"/Users/Kokweazel/TheGame/view/fleet.py",
+		"/Users/Kokweazel/TheGame/visualization/view.py",
+		"/Users/Kokweazel/TheGame/implementations/counter.py",
+		"/Users/Kokweazel/TheGame/controllers/universe.py",
+		"/Users/Kokweazel/TheGame/controllers/player.py",
+		"/Users/Kokweazel/TheGame/implementations/container.py",
+		"/Users/Kokweazel/TheGame/visualization/fabric.py",
+		"/Users/Kokweazel/TheGame/visualization/button.py",
+		"/Users/Kokweazel/TheGame/visualization/switch.py",
+		"/Users/Kokweazel/TheGame/visualization/windowobjects.py",
+		"/Users/Kokweazel/TheGame/visualization/slide.py",
+		"/Users/Kokweazel/TheGame/PyGameTest.py",
+		"/Users/Kokweazel/TheGame/visualization/trigger.py",
+		"/Users/Kokweazel/TheGame/visualization/text.py",
+		"/Users/Kokweazel/TheGame/visualization/coordinatehandler.py",
+		"/Users/Kokweazel/TheGame/visualization/pgvtwo.py",
+		"/Users/Kokweazel/TheGame/visualization/pygameview.py",
+		"/Users/Kokweazel/TheGame/view/universe.py",
+		"/Users/Kokweazel/TheGame/implementations/book.py",
+		"/Users/Kokweazel/TheGame/visualization/stringviz.py",
+		"/Users/Kokweazel/TheGame/visualization/terminal.py",
+		"/Users/Kokweazel/TheGame/controllers/tests.py",
+		"/Users/Kokweazel/TheGame/implementations/factory.py",
+		"/Users/Kokweazel/TheGame/logic/logic.py",
+		"/Users/Kokweazel/TheGame/logic/tests.py",
+		"/Users/Kokweazel/TheGame/logic/__init__.py",
+		"/Users/Kokweazel/TheGame/logic/viewers/__init__.py",
+		"/Users/Kokweazel/TheGame/logic/viewers/player.py",
+		"/Users/Kokweazel/TheGame/logic/controllers/universe.py",
+		"/Users/Kokweazel/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/Kokweazel/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/Kokweazel/TheGame/logic/controllers/tests.py",
+		"/Users/Kokweazel/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/tests.py",
+		"/Users/Kokweazel/TheGame/models/__init__.py",
+		"/Users/Kokweazel/TheGame/helpers/__init__.py",
+		"/Users/Kokweazel/TheGame/implementations/__init__.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/models.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/factory.py",
+		"/Users/Kokweazel/TheGame/controllers/rest.py",
+		"/Users/Kokweazel/TheGame/controllers/__init__.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/__init__.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/view.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/interfaces.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/TheGameOne.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/sandbox.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/container.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/controller.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/terminal.py",
+		"/Users/Kokweazel/TheGame/NewGameAlpha/setup.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<current file>",
+			"<open files>",
+			"<open folders>",
+			"<open files>",
+			"<open folders>",
+			"<parent folder>",
+			"<current folder>",
+			"<folder>",
+			"<current file>",
+			"<project>",
+			"<current file>",
+			"<project>",
+			"<current file>",
+			"file",
+			"rooms.ini",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"cords",
+			"FakeField",
+			"alive",
+			"current",
+			"FakeFieldObject",
+			"FakeFieldObject{",
+			"[]int",
+			"FakeField",
+			"FakeBoard",
+			"&FakeBoard",
+			"FieldObject",
+			"Board",
+			"Field",
+			"gf.gf.Field",
+			"Field",
+			"[]int",
+			"int",
+			"Border",
+			"CROSSWALK",
+			"FREE",
+			"DOOR",
+			"WALL",
+			"DOOR",
+			"WALL",
+			"DOOR",
+			"sections",
+			"python",
+			"path",
+			"PATH",
+			"space",
+			"logging",
+			"viewmodel_fabric.py",
+			"import configuration.log_details as log",
+			"log.log",
+			"self.player_choice",
+			"self.",
+			"self. ",
+			"self, ",
+			"self.",
+			"self",
+			"View",
+			"sample_info",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Cords",
+			"gf.FakeField",
+			"IsAlive",
+			"Current",
+			"fo.FakeFieldObject",
+			"fo.FakeFieldObject{Identifier: ",
+			"[2]int",
+			"gf.FakeField",
+			"gb.FakeBoard",
+			"&gb.FakeBoard",
+			"fo.FieldObject",
+			"gb.Board",
+			"gf.Field",
+			"[2]int",
+			"c.Border",
+			"c.CROSSWALK",
+			"c.FREE",
+			"c.DOOR",
+			"c.WALL",
+			"universe",
+			"log",
+			"import logging",
+			"logging.info",
+			"player_choice",
+			"",
+			"bv.View",
+			"matrix",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///Users/Kokweazel/CustomMutex":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGame/database":
+	{
+		"height": 112.0
+	},
+	"output.9o:///Users/Kokweazel/TheGame/producing/models":
+	{
+		"height": 112.0
+	},
+	"output.9o:///Users/Kokweazel/TheGame/viewmodels":
+	{
+		"height": 112.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome":
+	{
+		"height": 253.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Board":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Builders":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Constants":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Controller":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Gameboard":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Gamefields":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Gameobjects":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/Kokweazel/TheGome/Stringview":
+	{
+		"height": 204.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 112.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 112.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 112.0
+	},
+	"output.exec":
+	{
+		"height": 160.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "Anaconda Python Builder",
+	"project": "rwmutex_test.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
