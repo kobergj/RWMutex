@@ -21,7 +21,7 @@ func (this *Counter) Read() int {
 	return this.counter
 }
 
-func writer(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T) {
+func writer(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T, testAlias string) {
 	rwm.Lock()
 
 	counter.Increment(6291)
@@ -29,7 +29,7 @@ func writer(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T) {
 	time.Sleep(1)
 
 	if c := counter.Read(); c != 6291 {
-		t.Error("Multiple Writes!")
+		t.Errorf("[%s] Write while WriteLock!", testAlias)
 	}
 
 	counter.Decrememt(6291)
@@ -37,7 +37,7 @@ func writer(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T) {
 	done <- true
 }
 
-func reader(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T) {
+func reader(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T, testAlias string) {
 	rwm.RLock()
 
 	first := counter.Read()
@@ -47,36 +47,36 @@ func reader(rwm RWMutex, counter *Counter, done chan<- bool, t *testing.T) {
 	second := counter.Read()
 
 	if first != second {
-		t.Error("Write while ReadLock!")
+		t.Errorf("[%s] Write while ReadLock!", testAlias)
 	}
 	rwm.RUnlock()
 	done <- true
 }
 
-func writetester(rwm RWMutex, writers int, t *testing.T) {
+func writetester(rwm RWMutex, writers int, t *testing.T, testAlias string) {
 	c := Counter{}
 	done := make(chan bool)
 	defer close(done)
 	for i := 0; i < writers; i++ {
-		go writer(rwm, &c, done, t)
+		go writer(rwm, &c, done, t, testAlias)
 	}
 	for i := 0; i < writers; i++ {
 		<-done
 	}
 }
 
-func readtester(rwm RWMutex, readers, writers int, t *testing.T) {
+func readtester(rwm RWMutex, readers, writers int, t *testing.T, testAlias string) {
 	c := Counter{}
 	done := make(chan bool)
 	defer close(done)
 	for i := 0; i < readers/2; i++ {
-		go reader(rwm, &c, done, t)
+		go reader(rwm, &c, done, t, testAlias)
 	}
 	for i := 0; i < writers; i++ {
-		go writer(rwm, &c, done, t)
+		go writer(rwm, &c, done, t, testAlias)
 	}
 	for i := 0; i < readers/2; i++ {
-		go reader(rwm, &c, done, t)
+		go reader(rwm, &c, done, t, testAlias)
 	}
 
 	for i := 0; i < readers+writers; i++ {
@@ -85,12 +85,64 @@ func readtester(rwm RWMutex, readers, writers int, t *testing.T) {
 }
 
 func Test_Lock(t *testing.T) {
-	rwm := NewMighlighHighMutex()
-	writetester(rwm, 10, t)
+	var testCases = []struct {
+		Alias         string
+		Mutex         RWMutex
+		NumberWriters int
+	}{
+		{
+			Alias:         "CustomMutex10Writers",
+			Mutex:         NewMighlighHighMutex(),
+			NumberWriters: 10,
+		},
+		{
+			Alias:         "ChannelMutex10Writers",
+			Mutex:         NewChannelMutex(),
+			NumberWriters: 10,
+		},
+	}
+
+	for _, testCase := range testCases {
+		rwm := testCase.Mutex
+		alias := testCase.Alias
+		writers := testCase.NumberWriters
+		writetester(rwm, writers, t, alias)
+	}
 }
 
 func Test_RLock(t *testing.T) {
 	rwm := NewMighlighHighMutex()
 
-	readtester(rwm, 10, 10, t)
+	readtester(rwm, 10, 10, t, "TestRLock")
+}
+
+func benchmarkRWMutex(b *testing.B, localWork, writeRatio int, rwm RWMutex) {
+	b.RunParallel(func(pb *testing.PB) {
+		foo := 0
+		for pb.Next() {
+			foo++
+			if foo%writeRatio == 0 {
+				rwm.Lock()
+				rwm.Unlock()
+			} else {
+				rwm.RLock()
+				for i := 0; i != localWork; i += 1 {
+					foo *= 2
+					foo /= 2
+				}
+				rwm.RUnlock()
+			}
+		}
+		_ = foo
+	})
+}
+
+func BenchmarkRWMutexWrite100(b *testing.B) {
+	rwm := NewMighlighHighMutex()
+	benchmarkRWMutex(b, 0, 100, rwm)
+}
+
+func BenchmarkBuildinRWMutexWrite100(b *testing.B) {
+	rwm := NewBuildInMutex()
+	benchmarkRWMutex(b, 0, 100, rwm)
 }

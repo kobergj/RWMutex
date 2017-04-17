@@ -1,7 +1,7 @@
 package CustomRWMutex
 
 import (
-// "sync"
+	"sync"
 )
 
 type RWMutex interface {
@@ -37,6 +37,10 @@ func (this *wMutex) RLock() {
 }
 
 func (this *wMutex) RUnlock() {
+}
+
+func NewBuildInMutex() RWMutex {
+	return &sync.RWMutex{}
 }
 
 func NewMighlighHighMutex() RWMutex {
@@ -97,6 +101,68 @@ func (this *milighHighMutex) cleanChannels() {
 			}
 			this.grantWriteLock <- true
 			<-this.releaseWriteLock
+		}
+	}
+}
+
+func NewChannelMutex() RWMutex {
+	awl := make(chan bool)
+	gwl := make(chan bool)
+	rwl := make(chan bool)
+
+	arl := make(chan bool)
+	rrl := make(chan bool)
+
+	rwm := &channelMutex{
+		acquireWriteLock: awl,
+		grantWriteLock:   gwl,
+		releaseWriteLock: rwl,
+
+		acquireReadLock: arl,
+		releaseReadLock: rrl,
+	}
+
+	go rwm.cleanChannels()
+
+	return rwm
+}
+
+type channelMutex struct {
+	acquireWriteLock chan bool
+	grantWriteLock   chan bool
+	releaseWriteLock chan bool
+
+	acquireReadLock chan bool
+	releaseReadLock chan bool
+	activeReadLocks int
+}
+
+func (this *channelMutex) Lock() {
+	this.acquireWriteLock <- true
+	<-this.grantWriteLock
+}
+
+func (this *channelMutex) Unlock() {
+	go func() {
+		this.releaseWriteLock <- true
+	}()
+}
+
+func (this *channelMutex) RLock() {
+
+}
+
+func (this *channelMutex) RUnlock() {
+
+}
+
+func (this *channelMutex) cleanChannels() {
+	for {
+		select {
+		case <-this.acquireWriteLock:
+			this.grantWriteLock <- true
+			<-this.releaseWriteLock
+
 		}
 	}
 }
