@@ -12,31 +12,25 @@ type RWMutex interface {
 	RUnlock()
 }
 
-func NewRWMutex() RWMutex {
-	// m := sync.RWMutex{}
-
-	c := make(chan bool, 1)
-	m := wMutex{c}
+func NewFakeMutex() RWMutex {
+	m := fakeMutex{}
 
 	return &m
 }
 
-type wMutex struct {
-	locked chan bool
+type fakeMutex struct {
 }
 
-func (this *wMutex) Lock() {
-	this.locked <- true
+func (this *fakeMutex) Lock() {
 }
 
-func (this *wMutex) Unlock() {
-	<-this.locked
+func (this *fakeMutex) Unlock() {
 }
 
-func (this *wMutex) RLock() {
+func (this *fakeMutex) RLock() {
 }
 
-func (this *wMutex) RUnlock() {
+func (this *fakeMutex) RUnlock() {
 }
 
 func NewBuildInMutex() RWMutex {
@@ -149,20 +143,162 @@ func (this *channelMutex) Unlock() {
 }
 
 func (this *channelMutex) RLock() {
-
+	this.acquireReadLock <- true
 }
 
 func (this *channelMutex) RUnlock() {
-
+	go func() {
+		this.releaseReadLock <- true
+	}()
 }
 
 func (this *channelMutex) cleanChannels() {
 	for {
 		select {
 		case <-this.acquireWriteLock:
+			for this.activeReadLocks != 0 {
+				<-this.releaseReadLock
+				this.activeReadLocks -= 1
+			}
 			this.grantWriteLock <- true
 			<-this.releaseWriteLock
-
+		case <-this.acquireReadLock:
+			this.activeReadLocks += 1
 		}
 	}
+}
+
+func NewClosingMutex() RWMutex {
+	awl := make(chan bool)
+	rwl := make(chan bool)
+
+	arl := make(chan bool)
+	rrl := make(chan bool)
+
+	rwm := &closingMutex{
+		acquireWriteLock: awl,
+		releaseWriteLock: rwl,
+
+		acquireReadLock: arl,
+		releaseReadLock: rrl,
+	}
+
+	go rwm.cleanChannels()
+
+	return rwm
+}
+
+type closingMutex struct {
+	acquireWriteLock chan bool
+	writelocked      chan bool
+	releaseWriteLock chan bool
+
+	acquireReadLock chan bool
+	readlocked      chan bool
+	releaseReadLock chan bool
+
+	activeReadLocks int
+}
+
+func (this *closingMutex) Lock() {
+	this.acquireWriteLock <- true
+}
+
+func (this *closingMutex) Unlock() {
+	go func() {
+		this.releaseWriteLock <- true
+	}()
+}
+
+func (this *closingMutex) RLock() {
+	this.acquireReadLock <- true
+}
+
+func (this *closingMutex) RUnlock() {
+	go func() {
+		this.releaseReadLock <- true
+	}()
+}
+
+func (this *closingMutex) cleanChannels() {
+	for {
+		select {
+
+		case <-this.acquireReadLock:
+			if this.readlocked == nil {
+				this.readlocked = make(chan bool)
+			}
+			this.activeReadLocks += 1
+		case <-this.releaseReadLock:
+			this.activeReadLocks -= 1
+			if this.activeReadLocks == 0 {
+				close(this.readlocked)
+				this.readlocked = nil
+			}
+		default:
+			if this.readlocked == nil {
+				select {
+				case <-this.acquireWriteLock:
+					if this.writelocked == nil {
+						this.writelocked = make(chan bool)
+					}
+					<-this.releaseWriteLock
+					close(this.writelocked)
+					this.writelocked = nil
+				default:
+					continue
+				}
+			}
+		}
+	}
+}
+
+func NewMaxReaderMutex(maxReaders int) RWMutex {
+	return &maxReaderMutex{
+		maxReaders: maxReaders,
+	}
+}
+
+type maxReaderMutex struct {
+	activeWriteLocks chan bool
+	activeReadLocks  chan bool
+
+	maxReaders int
+}
+
+func (this *maxReaderMutex) Lock() {
+	if this.activeWriteLocks == nil {
+		this.activeWriteLocks = make(chan bool, 1)
+	}
+
+	this.activeWriteLocks <- true
+
+	if this.activeReadLocks == nil {
+		this.activeReadLocks = make(chan bool, this.maxReaders)
+	}
+
+	for i := 0; i < this.maxReaders; i++ {
+		this.activeReadLocks <- true
+	}
+
+}
+
+func (this *maxReaderMutex) Unlock() {
+	<-this.activeWriteLocks
+
+	for i := 0; i < this.maxReaders; i++ {
+		<-this.activeReadLocks
+	}
+}
+
+func (this *maxReaderMutex) RLock() {
+	if this.activeReadLocks == nil {
+		this.activeReadLocks = make(chan bool, this.maxReaders)
+	}
+
+	this.activeReadLocks <- true
+}
+
+func (this *maxReaderMutex) RUnlock() {
+	<-this.activeReadLocks
 }
